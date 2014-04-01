@@ -27,6 +27,7 @@ foreach(range(1,3) as $month) {
 		if(trim($target->plaintext) === "Written Assembly Questions and Answers") {
 			$url = "http://assemblywales.org/" . str_replace("&amp;","&",$target->href);
 			echo "$url\n";
+			scraperwiki::save_sqlite(array("url"),array("url"=>$url));
 			unset($url);
 		}
 		
