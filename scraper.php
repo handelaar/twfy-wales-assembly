@@ -29,7 +29,7 @@ foreach(range(1,3) as $month) {
 			#$existingRecords = scraperwiki::select("* from data where `url`='" . $url . "'");
 			
 			#if (sizeof($existingRecords) == 0) {
-				scraperwiki::save(array('url'), $url);
+				scraperwiki::save(array('url'), array($url));
 			#}
 			unset($url);
 		}
