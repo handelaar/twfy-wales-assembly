@@ -26,11 +26,11 @@ foreach(range(1,3) as $month) {
 		
 		if(trim($target->plaintext) === "Written Assembly Questions and Answers") {
 			$url = "http://assemblywales.org/" . str_replace("&amp;","&",$target->href);
-			$existingRecords = scraperwiki::select("* from data where `url`='" . $url . "'");
+			#$existingRecords = scraperwiki::select("* from data where `url`='" . $url . "'");
 			
-			if (sizeof($existingRecords) == 0) {
+			#if (sizeof($existingRecords) == 0) {
 				scraperwiki::save(array('url'), $url);
-			}
+			#}
 			unset($url);
 		}
 		
